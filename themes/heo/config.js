@@ -9,7 +9,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '欢迎来到我的博客', url: 'https://www.moshang.eu.org/' },
-    { title: '时光是悠悠长河中的水波''是漫漫旅途中的清风', url: 'https://moshang1686.eu.org' }
+    { title: '时光是悠悠长河中的水波', url: 'https://moshang1686.eu.org' }
   ],
 
   // 英雄区左右侧组件颠倒位置
