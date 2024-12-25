@@ -24,7 +24,7 @@ const BLOG = {
 
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'moshang168', // 您的昵称 例如 tangly1024
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '墨殇个人博客', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://moshang.eu.org', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || '墨殇, 博客', // 网站关键词 英文逗号隔开
@@ -131,13 +131,13 @@ const BLOG = {
     '/dashboard/[[...index]]': 'LayoutDashboard'
   },
 
-  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
+  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || false, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
   // 自定义右键菜单
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU:
     process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU || true, // 自定义右键菜单，覆盖系统菜单
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_SWITCH:
     process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_SWITCH ||
-    true, // 是否显示切换主题
+    false, // 是否显示切换主题
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU_DARK_MODE:
     process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU_DARK_MODE || true, // 是否显示深色模式
   CUSTOM_RIGHT_CLICK_CONTEXT_MENU_SHARE_LINK:
@@ -163,7 +163,7 @@ const BLOG = {
   FACEBOOK_PAGE_ID: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID || '', // Facebook Page ID 來啟用 messenger 聊天功能
   FACEBOOK_APP_ID: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '', // Facebook App ID 來啟用 messenger 聊天功能 获取: https://developers.facebook.com/
 
-  BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXXX
+  BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '沪ICP备81051941', // 备案号 闽ICP备XXXXXXX
 
   // START********代码相关********
   // PrismJs 代码相关
@@ -260,7 +260,7 @@ const BLOG = {
   MOUSE_FOLLOW_EFFECT_COLOR: '#ef672a', // 鼠标点击特效颜色 #xxxxxx 或者 rgba(r,g,b,a)
 
   // 樱花飘落特效
-  SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // 开关
+  SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
   // 漂浮线段特效
   NEST: process.env.NEXT_PUBLIC_NEST || false, // 开关
   // 动态彩带特效
@@ -296,7 +296,7 @@ const BLOG = {
     process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
     'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_SWITCH_THEME:
-    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
+    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || false, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
   MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
@@ -361,7 +361,7 @@ const BLOG = {
     process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || 'kingYs0090/NotionNext', // 你的代码仓库名， 例如我是 'tangly1024/NotionNext'； 更多文档参考 https://utteranc.es/
 
   // giscus @see https://giscus.app/
-  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
+  COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || 'kingYs0090/NotionNext', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
   COMMENT_GISCUS_REPO_ID: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO_ID || '', // 你的Github Repo ID e.g ( 設定完 giscus 即可看到 )
   COMMENT_GISCUS_CATEGORY_ID:
     process.env.NEXT_PUBLIC_COMMENT_GISCUS_CATEGORY_ID || '', // 你的Github Discussions 內的 Category ID ( 設定完 giscus 即可看到 )
@@ -386,9 +386,9 @@ const BLOG = {
     process.env.NEXT_PUBLIC_COMMENT_CUSDIS_SCRIPT_SRC || '/js/cusdis.es.js', // change this if you're using self-hosted version
 
   // gitalk评论插件 更多参考 https://gitalk.github.io/
-  COMMENT_GITALK_REPO: process.env.NEXT_PUBLIC_COMMENT_GITALK_REPO || '', // 你的Github仓库名，例如 'NotionNext'
-  COMMENT_GITALK_OWNER: process.env.NEXT_PUBLIC_COMMENT_GITALK_OWNER || '', // 你的用户名 e.g tangly1024
-  COMMENT_GITALK_ADMIN: process.env.NEXT_PUBLIC_COMMENT_GITALK_ADMIN || '', // 管理员用户名、一般是自己 e.g 'tangly1024'
+  COMMENT_GITALK_REPO: process.env.NEXT_PUBLIC_COMMENT_GITALK_REPO || 'NotionNext', // 你的Github仓库名，例如 'NotionNext'
+  COMMENT_GITALK_OWNER: process.env.NEXT_PUBLIC_COMMENT_GITALK_OWNER || 'e.g kingYs0090', // 你的用户名 e.g tangly1024
+  COMMENT_GITALK_ADMIN: process.env.NEXT_PUBLIC_COMMENT_GITALK_ADMIN || 'e.g kingYs0090', // 管理员用户名、一般是自己 e.g 'tangly1024'
   COMMENT_GITALK_CLIENT_ID:
     process.env.NEXT_PUBLIC_COMMENT_GITALK_CLIENT_ID || '', // e.g 20位ID ， 在gitalk后台获取
   COMMENT_GITALK_CLIENT_SECRET:
@@ -515,7 +515,7 @@ const BLOG = {
   },
 
   // RSS订阅
-  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
+  ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || false, // 是否开启RSS订阅功能
   MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID || null, // 开启mailichimp邮件订阅 客户列表ID ，具体使用方法参阅文档
   MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY || null, // 开启mailichimp邮件订阅 APIkey
 
@@ -529,12 +529,12 @@ const BLOG = {
     process.env.NEXT_PUBLIC_IMG_LAZY_LOAD_PLACEHOLDER ||
     'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==', // 懒加载占位图片地址，支持base64或url
   IMG_URL_TYPE: process.env.NEXT_PUBLIC_IMG_TYPE || 'Notion', // 此配置已失效，请勿使用；AMAZON方案不再支持，仅支持Notion方案。 ['Notion','AMAZON'] 站点图片前缀 默认 Notion:(https://notion.so/images/xx) ， AMAZON(https://s3.us-west-2.amazonaws.com/xxx)
-  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // 文章图片是否自动添加阴影
+  IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || true, // 文章图片是否自动添加阴影
   IMG_COMPRESS_WIDTH: process.env.NEXT_PUBLIC_IMG_COMPRESS_WIDTH || 800, // Notion图片压缩宽度
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'MoShang BLOG', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
   HOME_BANNER_IMAGE:
     process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
   DESCRIPTION:
